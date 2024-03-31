@@ -8,6 +8,7 @@ User management system designed to facilitate secure identity and access managem
 - virtualvenv
 - Django 5.0.3
 - djangorestframework 3.15.1
+- djangorestframework-simplejwt
 
 ## Environment Setup
 
