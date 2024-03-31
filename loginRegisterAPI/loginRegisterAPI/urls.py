@@ -19,5 +19,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls), # Admin panel endpoint
-    path('', include('userApi.urls')) # Include userApi URLs
+    path('', include('userApi.urls')), # Include userApi URLs
+    path('api-auth/', include("rest_framework.urls")),
 ]
