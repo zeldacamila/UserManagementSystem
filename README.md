@@ -2,88 +2,49 @@
 
 User management system designed to facilitate secure identity and access management for web applications. It features a set of functionalities including user registration, login, account recovery, and password management, ensuring a seamless and secure user experience.
 
-1. Django Installation
+## Requirements
 
-```python
-pip install Django
+- Python 3.10 or higher
+- virtualvenv
+- Django 5.0.3
+- djangorestframework 3.15.1
+
+## Environment Setup
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/zeldacamila/UserManagementSystem.git
+cd UserManagementSystem/loginRegisterAPI
 ```
 
-2. Django Rest Framework Installation
+2. Create virtual environment
 
-```python
-pip install djangorestframework
+```bash
+python -m venv venv
 ```
 
-3. Start Django Project
+3. Activate virtual env
 
-```python
-django-admin startproject loginRegisterAPI
+```bash
+source venv/bin/activate
 ```
 
-```python
-cd loginRegisterAPI
+On Windows:
+
+```bash
+venv\Scripts\activate
 ```
 
-```python
-python manage.py startapp userApi
+4. Install libraries
+
+```bash
+pip install -r requirements.txt
 ```
 
-4. Register userApi app
+5. Start out application
 
-```python
-INSTALLED_APPS = [
-    'userApi.apps.UserApiConfig',
-]
-```
-
-5. Register Django Rest Framework
-
-```python
-INSTALLED_APPS = [
-    'rest_framework',
-]
-```
-
-6. Models
-
-```python
+```bash
 python manage.py migrate
-```
-
-7. Start out application
-
-```python
 python manage.py runserver
-```
-
-8. Create superuser
-
-```python
-python manage.py createsuperuser
-```
-
-9. Run application again
-
-```python
-python manage.py runserver
-```
-
-10. Include URL for our app
-
-```python
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path("", include("todoList.urls"))
-]
-```
-
-11. Update the url file
-
-```python
-from django.urls import path
-from .views import index
-
-urlpatterns = [
-    path("", index, name = "index")
-]
 ```
